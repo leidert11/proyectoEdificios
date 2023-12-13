@@ -11,7 +11,7 @@ package com.mycompany.proyectoedificios;
 public class ProyectoEdificios {
 
     public static void main(String[] args) {
-        String[] nombresPisosZenith = {"parqueadero motos ", "recepción y cafetería","parqueadero carros 1","parqueadero carros 2" ,"majorel","vacio","campus","vacio","cafetería 2"};
+        String[] nombresPisosZenith = {"parqueadero motos ", "recepcion y cafeteria","parqueadero carros 1","parqueadero carros 2" ,"majorel","vacio","campus","vacio","cafetería 2"};
         Torre torreZenith = new Torre(9, "blanco verde y marrón", "acero y concreto", "torre zenith", nombresPisosZenith);
 
         String[] nombresPisosBaichala = { "entrada principal", "majorel", "majorel 2", "majorel 3", "archivo", "area ejecutiva", "area administrativa", "terraza"};
@@ -20,12 +20,23 @@ public class ProyectoEdificios {
         Edificio edificio1 = torreZenith;
         Edificio edificio2 = torreBaichala;
 
-        System.out.println("El nombre del edificio 1 es: " + edificio1.getNombre());
-        System.out.println("El color del edificio 1 es: " + edificio1.getColor());
-        System.out.println("El área del edificio 1 es: " + edificio1.calcularArea());
+        System.out.println("el nombre del edificio 1 es: " + edificio1.getNombre());
+        System.out.println("el color del edificio 1 es: " + edificio1.getColor());
+        System.out.println("el área del edificio 1 es: " + edificio1.calcularArea());
+        System.out.println(" ");
+        System.out.println("el nombre del edificio 2 es: " + edificio2.getNombre());
+        System.out.println("el color del edificio 2 es: " + edificio2.getColor());
+        System.out.println("el área del edificio 2 es: " + edificio2.calcularArea());
+        System.out.println(" ");
 
-        System.out.println("El nombre del edificio 2 es: " + edificio2.getNombre());
-        System.out.println("El color del edificio 2 es: " + edificio2.getColor());
-        System.out.println("El área del edificio 2 es: " + edificio2.calcularArea());
+
+        for (int i = 0; i < torreZenith.getPisos(); i++) {
+            System.out.println("Nombre del piso " + i + ": " + torreZenith.getNombrePiso(i));
+        }
+        System.out.println(" ");
+
+        for (int i = 0; i < torreZenith.getPisos(); i++) {
+            System.out.println("Nombre del piso " + i + ": " + torreBaichala.getNombrePiso(i));
+        }
     }
 }
