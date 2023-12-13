@@ -29,14 +29,15 @@ public class ProyectoEdificios {
         System.out.println("el área del edificio 2 es: " + edificio2.calcularArea());
         System.out.println(" ");
 
-
+        System.out.println("pisos del edificio "+ edificio1.getNombre());
         for (int i = 0; i < torreZenith.getPisos(); i++) {
             System.out.println("Nombre del piso " + i + ": " + torreZenith.getNombrePiso(i));
         }
         System.out.println(" ");
-
-        for (int i = 0; i < torreZenith.getPisos(); i++) {
-            System.out.println("Nombre del piso " + i + ": " + torreBaichala.getNombrePiso(i));
+        System.out.println("pisos del edificio "+ edificio2.getNombre());
+        int suma = 1;
+        for (int i = 0; i < torreBaichala.getPisos(); i++) {
+            System.out.println("Nombre del piso " + (suma++) + ": " + torreBaichala.getNombrePiso(i));
         }
     }
 }
